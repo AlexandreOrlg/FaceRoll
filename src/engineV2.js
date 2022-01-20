@@ -1,10 +1,10 @@
 
-var AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext
-var audioContext = audioContext || new AudioContext()
-var audio = new Audio()
+var AudioContext
+var audioContext
+var audio
 
-var input = input || audioContext.createMediaElementSource(audio)
-var analyser = audioContext.createAnalyser()
+var input
+var analyser
 
 var animationFunc
 
@@ -12,11 +12,22 @@ var animationFunc
 var speed = 4
 
 
-input.connect(analyser)
-input.connect(audioContext.destination)
-
-
 export const process = (canvas) => {
+
+
+
+    AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext
+    audioContext = audioContext || new AudioContext()
+    audio = new Audio()
+
+    input = input || audioContext.createMediaElementSource(audio)
+    analyser = audioContext.createAnalyser()
+
+
+
+
+    input.connect(analyser)
+    input.connect(audioContext.destination)
 
     let ctx = canvas.getContext("2d")
     let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
