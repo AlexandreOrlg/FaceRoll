@@ -75,6 +75,20 @@
       <Generator />
     {/if}
   </div>
+  <div class="footer">
+    Made with the <img
+      src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/red-heart_2764-fe0f.png"
+      style="height: 16px; padding : 0 6px"
+      alt=""
+    />
+    at Paris by
+    <a
+      style="margin-left: 6px"
+      href="https://www.linkedin.com/in/alexandre-orliaguet/"
+    >
+      Alexandre Orliaguet</a
+    >
+  </div>
 </main>
 
 <style>
@@ -88,7 +102,17 @@
     align-items: center;
     justify-content: center;
   }
-
+  .footer {
+    position: absolute;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
   .glass-container {
     display: grid;
     grid-template-rows: 50px 1fr 50px;
